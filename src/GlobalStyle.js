@@ -13,6 +13,7 @@ html {
 body {
   /* font-family: 'Montserrat', cursive, sans-serif; */
   background-color:  ${({theme}) => theme.color.whiteLilac};
+  font-family: 'Inter', sans-serif;
   /*
   text-align: center;
   max-width: 5000px;

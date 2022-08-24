@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Container } from './components/Container/styled';
-import { Block, ImgBlock } from './components/Block/styled';
+import { Block } from './components/AboutMe/styled';
 import { Wrapper, Tile } from './components/Tiles/styled';
-import Blocker from './components/Block';
+import AboutMe from './components/AboutMe';
 
 function App() {
   return (
   <Container>
-    <Blocker/>
+    <AboutMe/>
     <Block/>
     <Block/>
     <Wrapper>
