@@ -12,10 +12,11 @@ html {
 }
 body {
   /* font-family: 'Montserrat', cursive, sans-serif; */
-  background: #4b4d66;
+  background-color:  ${({theme}) => theme.color.whiteLilac};
+  /*
   text-align: center;
   max-width: 5000px;
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0 0px; */
 }
 `;
