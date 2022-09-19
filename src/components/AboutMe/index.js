@@ -1,13 +1,14 @@
-import { IntroBlock, MyPhoto, ModeChange, Text, Name, Article, HireMeButton  } from "./styled";
+import { IntroBlock, MyPhoto, ModeChange, Text, Name, Article, HireMeButton, IconBody, Body, DarkMode  } from "./styled";
 import me from "../../images/me.jpg"
-import { ReactComponent as ButtonImg} from '../../images/Button-default-LM.svg';
+import { ReactComponent as ButtonImg} from '../../images/hireMe.svg';
+ import { ReactComponent as SunIcon } from "../../images/SunIcon.svg";
 
 function AboutMe() {
   
   return (
     <IntroBlock>
     <MyPhoto src={me}/>
-    <ModeChange>dark mode off<button>NOC/DZIEŃ</button></ModeChange>
+    <ModeChange><DarkMode>DARK MODE OFF</DarkMode><IconBody><Body><SunIcon/></Body></IconBody></ModeChange>
    <Text>THIS IS</Text> 
      <Name>Jakub Nowakowski</Name> 
     <Article>⭐✌️ I'm passionate Frontend Developer in love with React, currently looking for new job opportunities.

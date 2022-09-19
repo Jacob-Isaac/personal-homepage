@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const Block = styled.div`
 height: 404px;
@@ -15,7 +15,7 @@ height: 404px;
 margin: auto;
 margin-top: 115px;
 display: grid;
-grid-template-columns: repeat(5, 1fr);
+/* grid-template-columns: repeat(5); */
 grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
@@ -27,26 +27,13 @@ width: 398px;
 height: 398px;
 grid-area: 1 / 1 / 6 / 3;
 border-radius: 50%;
+margin-right: 66px;
 `;
 
-export const ModeChange = styled.div`
-grid-area: 1 / 5 / 2 / 6; 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 12px;
-/* line-height: 130%; */
-/* display: flex; */
-/* align-items: center; */
-text-transform: uppercase;
-color: #6E7E91;
-/* flex: none; */
-/* order: 0;
-flex-grow: 0; */
-`;
+
 
 export const Text = styled.div`
-grid-area: 2 / 3 / 3 / 5;
+grid-area: 2 / 3 / 2 / 5;
 color:  ${({theme}) => theme.color.SlateGray};
 font-family: 'Inter';
 font-style: normal;
@@ -112,6 +99,65 @@ export const HireMeButton = styled.a`
         transition: 0.6s;
     }
     border-radius: 4px;
+`;
+
+
+
+export const ModeChange = styled.div`
+
+grid-area: 1 / 6 / 1 / 6 ; 
+display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+/* line-height: 130%; */
+/* display: flex; */
+/* align-items: center; */
+
+/* flex: none; */
+/* order: 0;
+flex-grow: 0; */
+`;
+export const DarkMode = styled.div`
+     color: #6E7E91;
+     font-weight: 700;
+     font-size: 12px;
+     display: flex;
+     flex-direction: row-reverse;
+     gap: 12px;
+     padding: 7px;
+
+
+`;
+
+export const IconBody = styled.button`
+
+     width: 47px;
+     height: 27px;
+     padding: 2px;
+     border: 1px solid  #6E7E91;
+     border-radius: 15px;
+     background: #E5E5E5;
+     &:hover{
+          cursor: pointer;
+     }
+`;
+export const Body = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: transform .6s;
+  background:  ${({theme}) => theme.color.SlateGray};
+  
+  ${({ iconTransition }) =>
+          iconTransition && css`
+          transform: translateX(20px);
+          & path {
+            fill: ${({theme}) => theme.color.SlateGray};
+        }
+    `};
 `;
 
 
