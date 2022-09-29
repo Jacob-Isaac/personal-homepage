@@ -1,5 +1,5 @@
 import { IntroBlock, MyPhoto, ModeChange, Text, Name, Article, HireMeButton, IconBody, Body, DarkMode  } from "./styled";
-import me from "../../images/me.jpg"
+import me from "../../images/me3.png"
 import { ReactComponent as ButtonImg} from '../../images/hireMe.svg';
  import { ReactComponent as SunIcon } from "../../images/SunIcon.svg";
 
