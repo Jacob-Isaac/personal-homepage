@@ -1,22 +1,25 @@
 import React from 'react';
 import './App.css';
 import { Container } from './components/Container/styled';
-import { Block } from './components/AboutMe/styled';
-import { Wrapper, Tile } from './components/Tiles/styled';
+import SkillsBlock from './components/SkillsBlock/index';
+import { Wrapper, Tiles } from './components/Tiles/styled';
 import AboutMe from './components/AboutMe';
+import { skillsList, toLearnList } from '../src/components/SkillsBlock/List/contents.js';
+import MainPage from './features/MainPage';
+import Footer from "./components/Footer"
 
 function App() {
+  console.log(skillsList);
   return (
   <Container>
     <AboutMe/>
-    <Block/>
-    <Block/>
-    <Wrapper>
-    <Tile/>
-    <Tile/>
-    <Tile/>
-    <Tile/>
-    </Wrapper>
+    <SkillsBlock 
+    title={"My skillset includes 🛠️"}
+    content={skillsList}
+    />
+    <SkillsBlock content={toLearnList} title={"What i want to learn next 🚀"}/>
+    <MainPage/>
+    <Footer/>
   </Container>
   );
 }
