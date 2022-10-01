@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
+import { ReactComponent as Marker } from "../../images/marker.svg";
 
 export const Block = styled.div`
 max-height: 404px;
 padding:20px;
 margin: auto;
-background-color:  ${({theme}) => theme.color.white};
+background-color:  white;
 margin-bottom: 72px;
 margin-top: 72px;
 box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.03);
@@ -23,8 +23,21 @@ grid-row-gap: 0px;
 
 `;
 
+export const StyledMarker = styled(Marker)`
+    margin-right: 16px;
+    flex-shrink: 0;
+    & circle {
+        fill: blue;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+        margin-right: 8px;
+        width: 6px;
+        height: 6px;
+    }
+`;
+
+
 export const Title = styled.h2`
-color:  ${({theme}) => theme.color.MineShaft};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 900;
@@ -57,7 +70,7 @@ font-weight: 400;
 font-size: 20px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.SlateGray};
+color:  gray;
 text-align: justify;
 margin-top: 16px;
 `;
