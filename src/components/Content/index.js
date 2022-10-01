@@ -1,11 +1,14 @@
-import {Wrapper} from "./styled.js"
+import { Wrapper, Title, Portfolio, Subtitle } from "./styled.js";
 
-const Content = ({ title, body}) => (
-
-    <Wrapper>
-       {title}
-       {body}
-    </Wrapper>
+const Content = ({ icon, title, subtitle, body }) => (
+  <Wrapper>
+    <Title>
+      {icon}
+      <Portfolio>{title}</Portfolio>
+      <Subtitle>{subtitle}</Subtitle>
+    </Title>
+    {body}
+  </Wrapper>
 );
 
 export default Content;

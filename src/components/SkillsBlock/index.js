@@ -5,7 +5,7 @@ import { ListWrapper, ListHeader, StyledList, ListItem, StyledMarker } from "../
 const SkillsBlock = ({title, content}) => (
     //<Wrapper>
     <Block>
-    <Title>{title}</Title>
+   <Title>{title}</Title>
     <StyledList>
     {/* {content.map((item, index) => (
                 <ListItem key={index}>

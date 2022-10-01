@@ -25,7 +25,6 @@ const MainPage = () => {
     case "success":
       returned = (
         <>
-     <p>sukces!</p>
      <Projects projects={mainPage.portfolioList}/>
      </>
       );
