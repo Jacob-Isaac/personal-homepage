@@ -7,6 +7,10 @@ background-color:  ${({theme}) => theme.color.white};
 border: 6px solid rgba(209, 213, 218, 0.3);
 box-shadow: 0px 0px 10px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
 border-radius: 4px;
+transition: border-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
+&:hover {
+        border-color: #0366D633;
+    }
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width: 100%;
     min-width: 280px;
@@ -17,6 +21,11 @@ export const UlWrapper = styled.div`
 margin-right:40px;
 margin-bottom: 30px;
 margin-top: 20px;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right:10px;
+    }
 `;
 
 export const StyledUl = styled.ul`
@@ -26,7 +35,7 @@ flex-wrap: wrap;
 flex-direction: column;
 gap: 22px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    margin-left: -30px;
+    padding: 10px;
     }
 `;
 
@@ -53,6 +62,7 @@ text-align: justify;
 color: #6E7E91;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;
+    padding-right: 20px;
     }
 `;
 
@@ -78,6 +88,7 @@ export const Demo = styled.span`
 export const Code = styled.span`
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 14px;
+    margin-right: 10px;
     }
 `;
 
