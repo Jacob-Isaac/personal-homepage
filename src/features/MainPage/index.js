@@ -31,7 +31,7 @@ const MainPage = () => {
       break;
     default:
         console.log(mainPage.ifLoading);
-        returned =<p>error!</p>;
+        returned = <p>error! error! error! error! error! error!</p>;
       //returned = <ErrorPage />;
   }
 
