@@ -34,7 +34,7 @@ margin-right: 66px;
 
 export const Text = styled.div`
 grid-area: 2 / 3 / 2 / 5;
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.grey};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -45,13 +45,24 @@ text-transform: uppercase;
 
 export const Name = styled.h1`
 grid-area: 2 / 3 / 4 / 5;
-color:  ${({theme}) => theme.color.MineShaft};
+color:  ${({theme}) => theme.color.black};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 900;
 font-size: 38px;
 line-height: 46px;
 letter-spacing: 0.05em;
+animation: fadeInAnimation ease 4s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
 `;
 
 export const Article = styled.article`
@@ -136,7 +147,7 @@ export const IconBody = styled.button`
      padding: 2px;
      border: 1px solid  #6E7E91;
      border-radius: 15px;
-     background: #E5E5E5;
+     background: ${({theme}) => theme.color.background};
      &:hover{
           cursor: pointer;
      }
@@ -149,13 +160,13 @@ export const Body = styled.span`
   height: 20px;
   border-radius: 50%;
   transition: transform .6s;
-  background:  ${({theme}) => theme.color.SlateGray};
+  background:  ${({theme}) => theme.color.background};
   
   ${({ iconTransition }) =>
           iconTransition && css`
           transform: translateX(20px);
           & path {
-            fill: ${({theme}) => theme.color.SlateGray};
+            fill: ${({theme}) => theme.color.background};
         }
     `};
 `;
