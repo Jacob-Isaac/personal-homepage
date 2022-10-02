@@ -11,14 +11,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  /* font-family: 'Montserrat', cursive, sans-serif; */
-  background-color:  ${({theme}) => theme.color.whiteLilac};
+  background-color:  ${({theme}) => theme.color.bodyBackground};
   font-family: 'Inter', sans-serif;
   display: block;
-  /*
-  text-align: center;
-  max-width: 5000px;
-  margin: 0 auto;
-  padding: 0 0px; */
 }
 `;
