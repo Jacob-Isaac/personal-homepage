@@ -1,5 +1,5 @@
-import { Block, Title, Article } from "./styled";
-import { ListWrapper, ListHeader, StyledList, ListItem, StyledMarker } from "../SkillsBlock/List/styled";
+import { Block, Title, Article, StyledMarker } from "./styled";
+import { ListWrapper, ListHeader, StyledList, ListItem } from "../SkillsBlock/List/styled";
 
 
 const SkillsBlock = ({title, content}) => (
@@ -7,13 +7,12 @@ const SkillsBlock = ({title, content}) => (
     <Block>
    <Title>{title}</Title>
     <StyledList>
-    {/* {content.map((item, index) => (
+     {content.map((item, index) => (
                 <ListItem key={index}>
                     <StyledMarker />
                     {item}
                 </ListItem>
-            ))} */}
-            {content}
+            ))}
         </StyledList>
     </Block>
     //</Wrapper>
