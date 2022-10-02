@@ -4,7 +4,7 @@ import { ReactComponent as githubLogo } from "../../../images/github.svg";
 
 export const StyledMarker = styled(Marker)`
     & circle {
-        fill: blue ;
+        fill: #0366D6;
     }
 `;
 export const StyledGithubLogo = styled(githubLogo)`
