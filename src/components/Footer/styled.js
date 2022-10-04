@@ -23,7 +23,7 @@ margin-bottom: 100px;
 
 
 export const Text = styled.div`
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.grey};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -32,30 +32,36 @@ line-height: 130%;
 text-transform: uppercase;
 `;
 
-export const Name = styled.h1`
-color:  ${({theme}) => theme.color.MineShaft};
-font-family: 'Inter';
-font-style: normal;
+export const Mail = styled.a`
+margin-top: 20px;
+color:  ${({theme}) => theme.color.black};
+text-decoration: none;
 font-weight: 900;
 font-size: 38px;
 line-height: 46px;
-letter-spacing: 0.05em;
+letter-spacing: 0.05em;       
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+&:hover{
+        color: ${({theme}) => theme.color.mainBlue};
+    }
 `;
 
 export const Article = styled.article`
-font-family: 'Inter';
-font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 18px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.black};
 text-align: justify;
 margin-top: 16px;
 `;
 
 export const SocialMedia = styled.div`
-margin-top:54px;
+margin-top:44px;
 display: flex;
 flex-direction: row;
 `;
