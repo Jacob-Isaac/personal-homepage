@@ -11,7 +11,7 @@ border-radius: 4px;
 `;
 
 export const IntroBlock = styled.div`
-height: 404px;
+
 margin: auto;
 margin-top: 115px;
 display: grid;
@@ -19,15 +19,27 @@ display: grid;
 grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
-
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+   display: flex;
+   flex-direction: column ;
+   margin-bottom: 10%;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  }
+  @media (min-width: 1060px) {
+height: 404px;
+  }
 `;
 
 export const MyPhoto = styled.img`
 width: 398px;
-height: 398px;
+
 grid-area: 1 / 1 / 6 / 3;
 border-radius: 50%;
 margin-right: 66px;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    width:100%;
+  }
 `;
 
 
@@ -41,6 +53,9 @@ font-weight: 700;
 font-size: 12px;
 line-height: 130%;
 text-transform: uppercase;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 10px;
+  }
 `;
 
 export const Name = styled.h1`
@@ -55,6 +70,9 @@ letter-spacing: 0.05em;
 animation: fadeInAnimation ease 4s;
 animation-iteration-count: 1;
 animation-fill-mode: forwards;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 26px;
+  }
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -73,9 +91,12 @@ font-weight: 400;
 font-size: 20px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.grey};
 text-align: justify;
 margin-top: 16px;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 16px;
+  }
 `;
 
 // export const HireMeButton = styled.div`
@@ -110,6 +131,10 @@ export const HireMeButton = styled.a`
         transition: 0.6s;
     }
     border-radius: 4px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    align-self: center;
+  }
+
 `;
 
 
@@ -127,6 +152,10 @@ display: flex;
 /* flex: none; */
 /* order: 0;
 flex-grow: 0; */
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-top:15px;
+    margin-bottom:15px;
+  }
 `;
 export const DarkMode = styled.div`
      color: #6E7E91;
