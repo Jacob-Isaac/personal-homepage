@@ -1,9 +1,11 @@
 import { StyledGithubLogo, StyledInstagramLogo, StyledLinkedInLogo } from "../StyledLogos/styled";
 import { IntroBlock, MyPhoto, ModeChange, Text, Mail, Article, HireMeButton, IconBody, Body, DarkMode, SocialMedia, SocialLink  } from "./styled";
+import { Container } from "../Container/styled";
 
 function Footer() {
   
   return (
+    <Container>
     <IntroBlock>
    <Text>Let's talk !</Text> 
      <Mail href="mailto:j.nowakowski.jakub@gmail.com">j.nowakowski.jakub@gmail.com</Mail> 
@@ -15,6 +17,7 @@ function Footer() {
         <SocialLink><StyledInstagramLogo/></SocialLink>
         </SocialMedia>
     </IntroBlock>
+    </Container>
   );
 }
 

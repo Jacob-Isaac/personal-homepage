@@ -13,10 +13,15 @@ border-radius: 4px;
 export const IntroBlock = styled.div`
 max-height: 404px;
 max-width: 700px;
-margin: left;
 display:flex;
 flex-direction: column;
 margin-bottom: 100px;
+
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
 `;
 
 
@@ -30,6 +35,10 @@ font-weight: 700;
 font-size: 12px;
 line-height: 130%;
 text-transform: uppercase;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 10px;
+  }
+
 `;
 
 export const Mail = styled.a`
@@ -48,6 +57,12 @@ transition: all 1s ease;
 &:hover{
         color: ${({theme}) => theme.color.mainBlue};
     }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
 `;
 
 export const Article = styled.article`
@@ -58,6 +73,9 @@ letter-spacing: 0.05em;
 color:  ${({theme}) => theme.color.black};
 text-align: justify;
 margin-top: 16px;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 12px;
+  }
 `;
 
 export const SocialMedia = styled.div`
