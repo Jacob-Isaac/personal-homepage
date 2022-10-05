@@ -13,49 +13,73 @@ border-radius: 4px;
 export const IntroBlock = styled.div`
 max-height: 404px;
 max-width: 700px;
-margin: left;
 display:flex;
 flex-direction: column;
 margin-bottom: 100px;
+
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
 `;
 
 
 
 
 export const Text = styled.div`
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.grey};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
 line-height: 130%;
 text-transform: uppercase;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 10px;
+  }
+
 `;
 
-export const Name = styled.h1`
-color:  ${({theme}) => theme.color.MineShaft};
-font-family: 'Inter';
-font-style: normal;
+export const Mail = styled.a`
+margin-top: 20px;
+color:  ${({theme}) => theme.color.black};
+text-decoration: none;
 font-weight: 900;
 font-size: 38px;
 line-height: 46px;
-letter-spacing: 0.05em;
+letter-spacing: 0.05em;       
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-ms-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+&:hover{
+        color: ${({theme}) => theme.color.mainBlue};
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
 `;
 
 export const Article = styled.article`
-font-family: 'Inter';
-font-style: normal;
 font-weight: 400;
-font-size: 20px;
+font-size: 18px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.SlateGray};
+color:  ${({theme}) => theme.color.black};
 text-align: justify;
 margin-top: 16px;
+@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 12px;
+  }
 `;
 
 export const SocialMedia = styled.div`
-margin-top:54px;
+margin-top:44px;
 display: flex;
 flex-direction: row;
 `;
