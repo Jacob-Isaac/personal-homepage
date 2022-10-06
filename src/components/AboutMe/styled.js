@@ -33,12 +33,12 @@ height: 404px;
 
 export const MyPhoto = styled.img`
 width: 398px;
-
 grid-area: 1 / 1 / 6 / 3;
 border-radius: 50%;
 margin-right: 66px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    width:100%;
+    width:90%;
+    align-self:right;
   }
 `;
 
@@ -96,6 +96,8 @@ text-align: justify;
 margin-top: 16px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
+    width:90%;
+    align-self: center;
   }
 `;
 
