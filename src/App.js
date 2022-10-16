@@ -12,9 +12,6 @@ function App() {
   console.log(skillsList);
   return (
   <Container>
-    <br/>
-    <br/>
-    // construction in progress
     <AboutMe/>
     <SkillsBlock 
     title={"My skillset includes 🛠️"}
