@@ -42,16 +42,18 @@ grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 export const MyPhoto = styled.img`
 grid-area: photo;
-width: 398px;
+max-width: 398px;
 border-radius: 50%;
 margin-right: 66px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     width:70%;
-    max-width:192px;
+    min-width:202px;
     align-self:start;
+    width:40%;
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
-    max-width:132px;
+     min-width:150px; 
+    width:50%;
   }
 `;
 
