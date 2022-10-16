@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { Container } from './components/Container/styled';
 import SkillsBlock from './components/SkillsBlock/index';
-import { Wrapper, Tiles } from './components/Tiles/styled';
 import AboutMe from './components/AboutMe';
 import { skillsList, toLearnList } from '../src/components/SkillsBlock/List/contents.js';
 import MainPage from './features/MainPage';
