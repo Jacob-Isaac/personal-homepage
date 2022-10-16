@@ -1,10 +1,9 @@
-import { Tiles, StyledUl, Name, Description, Links, Demo, Code, Link, UlWrapper} from "./styled";
+import { Tiles, StyledUl, Name, Description, Links, Demo, Code, Link} from "./styled";
 
 
 
 const Tile = ({project}) => (
     <Tiles>
-        <UlWrapper>
         <StyledUl>
         <Name>{project.name}</Name>
         <Description>{project.description}</Description>
@@ -13,7 +12,6 @@ const Tile = ({project}) => (
         <Code>Code: <Link rel="stylesheet" href={project.html_url} target="_blank">{project.html_url}</Link></Code>
         </Links>
         </StyledUl>
-        </UlWrapper>
     </Tiles>
 );
 

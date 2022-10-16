@@ -17,10 +17,6 @@ display:flex;
 flex-direction: column;
 margin-bottom: 100px;
 
-@media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 
 `;
 

@@ -15,6 +15,7 @@ export const theme = {
         tablet: 1060,
         mobile: 800,
         miniMobile: 500,
+        extra: 878,
     },
     fontSize: {
         regular: 400,
