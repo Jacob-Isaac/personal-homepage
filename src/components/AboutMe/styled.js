@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import { ReactComponent as ButtonImg} from '../../images/hireMe.svg';
 
 export const Block = styled.div`
 height: 404px;
@@ -10,45 +11,56 @@ box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.
 border-radius: 4px;
 `;
 
-export const IntroBlock = styled.div`
 
-margin: auto;
-margin-top: 115px;
+export const IntroBlock = styled.div`
+   margin-top: 115px;
+margin-bottom: 115px;
+max-height: 404px;
 display: grid;
-/* grid-template-columns: repeat(5); */
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+grid-template-columns: 1fr 2fr;
+grid-template-rows: 1fr 1fr 1fr 2fr 3fr;
+ grid-template-areas:
+      "photo mode "
+      "photo txt "
+      "photo myName "
+      "photo article "
+      "photo hireButton ";
+      grid-row-gap: 10px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-   display: flex;
-   flex-direction: column ;
-   margin-bottom: 10%;
-  }
-  @media (min-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-  }
-  @media (min-width: 1060px) {
-height: 404px;
+  grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+ grid-template-areas:
+      "mode"
+      "photo" 
+      "txt"
+      "myName"
+      "article"
+      "hireButton";
+      margin-top: 0px;
   }
 `;
 
 export const MyPhoto = styled.img`
+grid-area: photo;
 width: 398px;
-grid-area: 1 / 1 / 6 / 3;
 border-radius: 50%;
 margin-right: 66px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    width:90%;
-    align-self:right;
+    width:70%;
+    max-width:192px;
+    align-self:start;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoint.miniMobile}px) {
+    max-width:132px;
   }
 `;
 
 
 
 export const Text = styled.div`
-grid-area: 2 / 3 / 2 / 5;
+grid-area: txt;
+align-self: end;
 color:  ${({theme}) => theme.color.grey};
-font-family: 'Inter';
-font-style: normal;
 font-weight: 700;
 font-size: 12px;
 line-height: 130%;
@@ -58,20 +70,25 @@ text-transform: uppercase;
   }
 `;
 
-export const Name = styled.h1`
-grid-area: 2 / 3 / 4 / 5;
+export const Name = styled.span`
+grid-area: myName;
+align-self: end;
 color:  ${({theme}) => theme.color.black};
-font-family: 'Inter';
-font-style: normal;
 font-weight: 900;
-font-size: 38px;
-line-height: 46px;
+/* font-size: 38px; */
+/* line-height: 46px; */
 letter-spacing: 0.05em;
 animation: fadeInAnimation ease 4s;
 animation-iteration-count: 1;
 animation-fill-mode: forwards;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    font-size: 30px;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoint.extra}px) {
+    font-size: 38px;
   }
 @keyframes fadeInAnimation {
     0% {
@@ -84,7 +101,9 @@ animation-fill-mode: forwards;
 `;
 
 export const Article = styled.article`
-grid-area: 3 / 3 / 5 / 5;
+grid-area: article;
+align-self: center;
+max-width: 630px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
@@ -93,7 +112,6 @@ line-height: 140%;
 letter-spacing: 0.05em;
 color:  ${({theme}) => theme.color.grey};
 text-align: justify;
-margin-top: 16px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
     width:90%;
@@ -102,7 +120,7 @@ margin-top: 16px;
 `;
 
 // export const HireMeButton = styled.div`
-// grid-area: 4 / 3 / 5 / 4;
+
 // margin-top: 60px;
 // width: 154px;
 // height: 49px;
@@ -111,7 +129,7 @@ margin-top: 16px;
 
 // export const HireMeButton = styled(HireButton)`
 // margin-top: 60px;
-// grid-area: 4 / 3 / 5 / 4;
+
 // &:hover {
 //     box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;
 //     border-radius: 4px;
@@ -123,30 +141,57 @@ margin-top: 16px;
 // `;
 
 export const HireMeButton = styled.a`
-    margin-top: 60px;
-    grid-area: 4 / 3 / 5 / 4;
-    width: 154px;
+grid-area: hireButton;
+padding-top: 15px;
+/* margin-top: 60px; */
+     /* padding-top: 14px;  */
+     width: 154px;
  height: 49px;
+ /* &:hover{
+        box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;
+        cursor: pointer;
+        transition: 0.6s;
+    } */
+    /* border-radius: 4px; */
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    /* align-self: center; */
+    /* width: 110px;
+ height: 30px; */
+  }
+
+`;
+
+export const StyledButtonImg = styled(ButtonImg)`
+/* grid-area: hireButton; */
+ width: 154px;
+ height: 49px;
+ border-radius: 4px;
  &:hover{
         box-shadow: 2px -2px 0px #8CC2FF, -2px 2px 0px #8CC2FF, 2px 2px 0px #8CC2FF, -2px -2px 0px #8CC2FF;
         cursor: pointer;
         transition: 0.6s;
+
     }
-    border-radius: 4px;
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    align-self: center;
+   
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    /* align-self: center; */
+    width: 138px;
+  height: 45px;
   }
 
 `;
 
 
 
-export const ModeChange = styled.div`
 
-grid-area: 1 / 6 / 1 / 6 ; 
+
+export const ModeChange = styled.div`
+grid-area: mode;
+
 display: flex;
      flex-direction: row;
      justify-content: flex-end;
+    
 /* line-height: 130%; */
 /* display: flex; */
 /* align-items: center; */
@@ -155,8 +200,10 @@ display: flex;
 /* order: 0;
 flex-grow: 0; */
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    margin-top:15px;
-    margin-bottom:15px;
+    /* margin-top:15px;
+    margin-bottom:15px; */
+    align-self: center;
+    margin-bottom: -45px;
   }
 `;
 export const DarkMode = styled.div`
@@ -167,6 +214,9 @@ export const DarkMode = styled.div`
      flex-direction: row-reverse;
      gap: 12px;
      padding: 7px;
+     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+ display:none;
+  }
 
 
 `;
