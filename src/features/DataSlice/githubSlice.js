@@ -16,12 +16,16 @@ const githubSlice = createSlice({
       state.ifLoading = "success";
       console.log(state.portfolioList);
     },
+    setError: (state) => {
+      state.ifLoading = "error";
+   },
   },
 });
 
 export const {
 fetchGithubData,
-setPortfolioList
+setPortfolioList,
+setError
 } = githubSlice.actions;
 
 export const selectPortfolioList = (state) => state.portfolioList;
