@@ -12,9 +12,9 @@ function Footer() {
     <Article>I’m always open to new projects whenever I have the time. If you have a website, dashboard or mobile app in mind and need some help to make your ideas come to life, feel free to conatct me
     </Article> 
       <SocialMedia>
-        <SocialLink><StyledGithubLogo/></SocialLink>
-        <SocialLink><StyledLinkedInLogo/></SocialLink>
-        <SocialLink><StyledInstagramLogo/></SocialLink>
+        <SocialLink target="_blank" href="https://github.com/Jacob-Isaac"><StyledGithubLogo/></SocialLink>
+        <SocialLink target="_blank" href="https://www.linkedin.com/in/jacob-nowakowski/"><StyledLinkedInLogo/></SocialLink>
+        <SocialLink target="_blank" href="https://www.instagram.com/tricolor.art/"><StyledInstagramLogo/></SocialLink>
         </SocialMedia>
     </IntroBlock>
     </Container>

@@ -78,13 +78,14 @@ export const SocialMedia = styled.div`
 margin-top:44px;
 display: flex;
 flex-direction: row;
+cursor: default;
 `;
 
-export const SocialLink = styled.div`
+export const SocialLink = styled.a`
 text-decoration: none;
 list-style-type: none;
+cursor: default;
 margin-right: 40px;
-
 `;
 
 export const HireMeButton = styled.a`
