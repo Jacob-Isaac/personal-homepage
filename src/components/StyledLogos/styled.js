@@ -13,8 +13,10 @@ export const StyledGithubLogo = styled(githubLogo)`
     fill: ${({ theme }) => theme.color.black};
   }
   &:hover {
+    cursor: default;
     & path {
       fill: ${({ theme }) => theme.color.mainBlue};
+
     }
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -33,8 +35,10 @@ export const StyledInstagramLogo = styled(instagramLogo)`
     fill: ${({ theme }) => theme.color.black};
   }
   &:hover {
+    cursor: default;
     & path {
       fill: ${({ theme }) => theme.color.mainBlue};
+ 
     }
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -53,8 +57,10 @@ export const StyledLinkedInLogo = styled(linkedInLogo)`
     fill: ${({ theme }) => theme.color.black};
   }
   &:hover {
+    cursor: default;
     & path {
       fill: ${({ theme }) => theme.color.mainBlue};
+      
     }
   }
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {

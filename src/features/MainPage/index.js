@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchGithubData, selectPortfolioList, selectLoadingState } from "../DataSlice/githubSlice";
 import Projects from "./Projects";
+import LoadingPage from "../../components/LoadingPage";
+import ErrorPage from "../../components/ErrorPage";
 
 const MainPage = () => {
 
@@ -18,8 +20,7 @@ const MainPage = () => {
   switch (mainPage.ifLoading) {
     case "loading":
       returned = (
-<p>ładujemy gnojka</p>
-       // <Loading />
+<LoadingPage/>
       );
       break;
     case "success":
@@ -29,10 +30,16 @@ const MainPage = () => {
      </>
       );
       break;
+
+      case "error":
+        returned = (
+          <ErrorPage/>
+        );
+        break;
     default:
-        console.log(mainPage.ifLoading);
-        returned = <p>error! error! error! error! error! error!</p>;
-      //returned = <ErrorPage />;
+      returned = (
+        <ErrorPage/>
+      );
   }
 
   return returned;
