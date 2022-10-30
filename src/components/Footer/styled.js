@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 export const Block = styled.div`
 height: 404px;
 margin: auto;
-background-color:  ${({theme}) => theme.color.white};
+background-color:  ${({theme}) => theme.color.tilesBackground};
 margin-bottom: 72px;
 margin-top: 72px;
 box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.03);
@@ -24,7 +24,7 @@ margin-bottom: 100px;
 
 
 export const Text = styled.div`
-color:  ${({theme}) => theme.color.grey};
+color:  ${({theme}) => theme.color.text};
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
@@ -39,7 +39,7 @@ text-transform: uppercase;
 
 export const Mail = styled.a`
 margin-top: 20px;
-color:  ${({theme}) => theme.color.black};
+color:  ${({theme}) => theme.color.titleAndIcons};
 text-decoration: none;
 font-weight: 900;
 font-size: 38px;
@@ -66,7 +66,7 @@ font-weight: 400;
 font-size: 18px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.black};
+color:  ${({theme}) => theme.color.titleAndIcons};
 text-align: justify;
 margin-top: 16px;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {

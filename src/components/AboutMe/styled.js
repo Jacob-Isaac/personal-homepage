@@ -4,7 +4,7 @@ import { ReactComponent as ButtonImg} from '../../images/hireMe.svg';
 export const Block = styled.div`
 height: 404px;
 margin: auto;
-background-color:  ${({theme}) => theme.color.white};
+background-color:  ${({theme}) => theme.color.tilesBackground};
 margin-bottom: 72px;
 margin-top: 72px;
 box-shadow: 0px 0px 20px rgba(9, 10, 51, 0.02), 0px 16px 20px rgba(9, 10, 51, 0.03);
@@ -62,7 +62,7 @@ margin-right: 66px;
 export const Text = styled.div`
 grid-area: txt;
 align-self: end;
-color:  ${({theme}) => theme.color.grey};
+color:  ${({theme}) => theme.color.text};
 font-weight: 700;
 font-size: 12px;
 line-height: 130%;
@@ -75,7 +75,7 @@ text-transform: uppercase;
 export const Name = styled.span`
 grid-area: myName;
 align-self: end;
-color:  ${({theme}) => theme.color.black};
+color:  ${({theme}) => theme.color.titleAndIcons};
 font-weight: 900;
 /* font-size: 38px; */
 /* line-height: 46px; */
@@ -112,7 +112,7 @@ font-weight: 400;
 font-size: 20px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color:  ${({theme}) => theme.color.grey};
+color:  ${({theme}) => theme.color.text};
 text-align: justify;
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
@@ -231,6 +231,7 @@ export const IconBody = styled.button`
      border: 1px solid  #6E7E91;
      border-radius: 15px;
      background: ${({theme}) => theme.color.background};
+     transition: background-color 1s cubic-bezier(0.69, 0.15, 0.31, 0.85);
      &:hover{
           cursor: pointer;
      }
