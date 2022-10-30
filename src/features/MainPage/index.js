@@ -9,7 +9,8 @@ import ErrorPage from "../../components/ErrorPage";
 const MainPage = () => {
 
   const dispatch = useDispatch();
-  const mainPage = useSelector(selectPortfolioList);
+  const portfolioList = useSelector(selectPortfolioList);
+  const ifLoading = useSelector(selectLoadingState);
 
   useEffect(() => {
     dispatch(fetchGithubData());
@@ -17,7 +18,7 @@ const MainPage = () => {
 
   let returned = "";
 
-  switch (mainPage.ifLoading) {
+  switch (ifLoading) {
     case "loading":
       returned = (
 <LoadingPage/>
@@ -26,7 +27,7 @@ const MainPage = () => {
     case "success":
       returned = (
         <>
-     <Projects projects={mainPage.portfolioList}/>
+     <Projects projects={portfolioList}/>
      </>
       );
       break;

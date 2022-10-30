@@ -22,7 +22,7 @@ font-weight: 900;
 font-size: 30px;
 line-height: 36px;
 letter-spacing: 0.05em;
-color: #252525;
+color: ${({ theme }) => theme.color.titleAndIcons};
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;
     }
@@ -35,7 +35,7 @@ font-weight: 400;
 font-size: 20px;
 line-height: 140%;
 letter-spacing: 0.05em;
-color: #252525;
+color: ${({ theme }) => theme.color.titleAndIcons};
 @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 16px;
     }

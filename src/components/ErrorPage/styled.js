@@ -19,7 +19,7 @@ export const StyledDangerIcon = styled(DangerIcon)`
   }
 `;
 export const Title = styled.p`
- color: ${({theme}) => theme.color.black};
+ color: ${({theme}) => theme.color.titleAndIcons};
  margin-top: 20px;
   text-align: center;
   font-weight: 600;
@@ -33,7 +33,7 @@ export const Title = styled.p`
 `;
 
 export const Text = styled.p`
- color: ${({theme}) => theme.color.black};
+ color: ${({theme}) => theme.color.text};
   margin: 24px;
   text-align: center;
   font-size: 18px;
@@ -50,8 +50,8 @@ margin-top: 20px;
   padding: 16px 24px;
   border: none;
   border-radius: 5px;
-  background:  #0366D6;
-  color: white;
+  background:  ${({ theme }) => theme.color.mainBlue};
+  color: ${({ theme }) => theme.color.tilesBackground};
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;

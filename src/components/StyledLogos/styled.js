@@ -10,7 +10,7 @@ export const StyledGithubLogo = styled(githubLogo)`
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    fill: ${({ theme }) => theme.color.black};
+    fill: ${({ theme }) => theme.color.titleAndIcons};
   }
   &:hover {
     cursor: default;
@@ -32,7 +32,7 @@ export const StyledInstagramLogo = styled(instagramLogo)`
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    fill: ${({ theme }) => theme.color.black};
+    fill: ${({ theme }) => theme.color.titleAndIcons};
   }
   &:hover {
     cursor: default;
@@ -54,7 +54,7 @@ export const StyledLinkedInLogo = styled(linkedInLogo)`
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    fill: ${({ theme }) => theme.color.black};
+    fill: ${({ theme }) => theme.color.titleAndIcons};
   }
   &:hover {
     cursor: default;
