@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 export const lightTheme = {
     color: {
         tilesBackground: "#FFFFFF",
@@ -56,3 +58,9 @@ export const darkTheme = {
         bold: 700,
     },
 };
+
+export const FlexCenter = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
