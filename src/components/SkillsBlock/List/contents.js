@@ -1,6 +1,7 @@
 export const skillsList = [
     "HTML",
     "JavaScript",
+    "TypeScript",
     "JS Immutability",
     "CSS BEM convention",
     "CSS Flexbox",
@@ -20,14 +21,14 @@ export const skillsList = [
     "Selling and negotiations skills",
     "Trello",
     "Web Design",
-    "Adobe Photoshop (Basic knowledge)",
-    "Adobe Illustrator (Basic knowledge)",
-    "Figma (Basic knowledge)",
+    "Adobe Photoshop (Basic)",
+    "Adobe Illustrator",
+    "Figma (Basic)",
     "Communicative English language",
   ];
 
   export const toLearnList = [
-      "TypeScript",
+      "React Query",
       "React Native",
       "Angular",
       "Mastering Illustrator",
